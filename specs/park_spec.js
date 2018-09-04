@@ -64,18 +64,22 @@ describe('Park', function() {
   });
 
   it('should be able to calculate the total number of visitors per year', function () {
-    const actual = 0;
-    assert.deepStrictEqual(actual, 0);
+    const actual = park.yearVisit();
+    assert.deepStrictEqual(actual, 913490.25);
   });
 
   it('should be able to calculate the total revenue from ticket sales for one year', function () {
-    const actual = 0;
-    assert.deepStrictEqual(actual, 0);
+    const actual = park.yearTicket();
+    assert.deepStrictEqual(actual, 91349025);
   });
 
   it('should be able to provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type', function () {
-    const actual = 0;
-    assert.deepStrictEqual(actual, 0);
+    const actual = park.diets();
+    assert.deepStrictEqual(actual, {
+      'carnivore': 1,
+      'herbivore': 1,
+      'omnivore': 1
+    });
   });
 
 });

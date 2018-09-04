@@ -52,7 +52,34 @@ Park.prototype.totalVisitors = function () {
       visitors += this.collection[i].guestsAttractedPerDay;
     }
     return visitors;
-  };
+};
 
+Park.prototype.yearVisit = function () {
+  let day = this.totalVisitors();
+  return day * 365.25;
+};
 
+Park.prototype.yearTicket = function () {
+  let visitors = this.yearVisit();
+  return visitors * this.ticketprice;
+};
+
+Park.prototype.diets = function () {
+  let carnivore = 0;
+  let herbivore = 0;
+  let omnivore = 0;
+  for (var i = 0; i < this.collection.length; i++) {
+    if (this.collection[i].diet == 'carnivore') {
+      carnivore++;
+    } else if (this.collection[i].diet == 'herbivore') {
+      herbivore++;
+    } else if (this.collection[i].diet == 'omnivore') {
+      omnivore++;
+    }
+    }
+    let results = {
+      'carnivore': carnivore, 'herbivore': herbivore, 'omnivore': omnivore
+    };
+    return results;
+};
 module.exports = Park;
