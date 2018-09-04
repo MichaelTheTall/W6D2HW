@@ -46,4 +46,13 @@ Park.prototype.deleteSpecies = function (species) {
   this.collection.splice(delarray[i],1);
 };
 
+Park.prototype.totalVisitors = function () {
+  let visitors = 0;
+  for (var i = 0; i < this.collection.length; i++) {
+      visitors += this.collection[i].guestsAttractedPerDay;
+    }
+    return visitors;
+  };
+
+
 module.exports = Park;

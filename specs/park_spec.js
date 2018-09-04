@@ -58,4 +58,24 @@ describe('Park', function() {
     assert.deepStrictEqual(actual, [dino1, dino2]);
   });
 
+  it('should be able to calculate the total number of visitors per day', function () {
+    const actual = park.totalVisitors();
+    assert.deepStrictEqual(actual, 2501);
+  });
+
+  it('should be able to calculate the total number of visitors per year', function () {
+    const actual = 0;
+    assert.deepStrictEqual(actual, 0);
+  });
+
+  it('should be able to calculate the total revenue from ticket sales for one year', function () {
+    const actual = 0;
+    assert.deepStrictEqual(actual, 0);
+  });
+
+  it('should be able to provide an object containing each of the diet types and the number of dinosaurs in the park of that diet type', function () {
+    const actual = 0;
+    assert.deepStrictEqual(actual, 0);
+  });
+
 });
